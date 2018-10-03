@@ -114,6 +114,11 @@ can specify the following email account attributes:
   `smtp.starttls.required`;;
   If `true`, then `STARTTLS` will be required. If that command fails, the
   connection will fail. Defaults to `false`.
+  
+  `smtp.ssl.trust`;;
+  Hostname for which certificates will be trusted, even if they are self-signed or signed by an unknown CA.
+  This is passed to javamail properties; see https://javaee.github.io/javamail/docs/api/com/sun/mail/smtp/package-summary.html for more information. This is an alternative to updating key/trust stores accordingly. 
+  *Note:* Make sure you understand the security implications of using such setting.
 
   `smtp.timeout`;;
   The socket read timeout. Default is two minutes.
